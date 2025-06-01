@@ -1,2 +1,2 @@
 # systems_integration
-Repository for THGA System Integrations course
+Repository for THGA Systems Integration course
