@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1,
    "id": "6b829a0a",
    "metadata": {},
    "outputs": [],
@@ -16,13 +16,13 @@
    "id": "2484e932-4e97-4af3-b3ec-b626faee227c",
    "metadata": {},
    "source": [
-    "#### Hinweis: Das neue SDK nutzt client.models.generate_content.\n",
-    "#### Parameter wie max_output_tokens werden jetzt in einem config-Objekt übergeben."
+    "# Hinweis: Das neue SDK nutzt client.models.generate_content.\n",
+    "# Parameter wie max_output_tokens werden jetzt in einem config-Objekt übergeben."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 2,
    "id": "ff5baff7",
    "metadata": {},
    "outputs": [],
@@ -33,10 +33,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 3,
    "id": "d5167455",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Gib hier deinen Google API Key ein: ········\n"
+     ]
+    }
+   ],
    "source": [
     "# Hier deinen Google AI Studio API-Schlüssel einfügen\n",
     "from getpass import getpass\n",
@@ -45,7 +53,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 4,
    "id": "b2bed088",
    "metadata": {},
    "outputs": [],
@@ -56,7 +64,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 5,
    "id": "ca1c18f0",
    "metadata": {},
    "outputs": [],
@@ -67,7 +75,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 6,
    "id": "062debe9",
    "metadata": {},
    "outputs": [],
@@ -78,7 +86,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 9,
    "id": "c80078e4",
    "metadata": {},
    "outputs": [],
@@ -92,10 +100,19 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 10,
    "id": "57bb55b7",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Antwort von Gemini 2.0 Flash:\n",
+      "Künstliche Intelligenz ist ein Teilbereich der Informatik, der sich der Entwicklung von Systemen widmet, die menschenähnliche kognitive Fähigkeiten wie Denken, Lernen und Handeln besitzen.\n"
+     ]
+    }
+   ],
    "source": [
     "# --- Schritt 3: Verarbeite und zeige die Antwort an ---\n",
     "try:\n",
@@ -108,7 +125,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 11,
    "id": "6d1751ec",
    "metadata": {},
    "outputs": [],
@@ -119,7 +136,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 12,
    "id": "84dbd0c4",
    "metadata": {},
    "outputs": [],
@@ -132,14 +149,23 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 13,
    "id": "a996c7fc",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Zweite Antwort:\n",
+      "Luna sprang auf den Schreibtisch und starrte auf den hellen Bildschirm. Mit ihren Pfoten tippte sie wild auf die Tastatur. Ein kurzes „Miau“ und sie drückte die Enter-Taste. Kurz darauf erhielt ihr Besitzer eine Bestätigung: 100 Dosen Thunfisch waren bestellt. Luna schnurrte zufrieden und legte sich auf die warme Maus.\n"
+     ]
+    }
+   ],
    "source": [
     "try:\n",
-    "    print(f\"2. Antwort von Modell-Version: {response.model_version}\")\n",
-    "    print(\"-\" * 30)\n",
+    "    print(\"\\nZweite Antwort:\")\n",
     "    print(response_2.text)\n",
     "except Exception as e:\n",
     "    print(f\"Fehler bei der Anzeige: {e}\")"
